@@ -79,15 +79,15 @@ body{
     left: 75px;
     top: 30px;
 }
-/* .col-2 img{
-    padding-right: 50px;
-} */
 h1{
     font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 50px;   
+}
+h3{
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
     font-weight: 900;
-    font-size: 50px;
-    /* line-height: 71px; */
-    
 }
 .hero-btn-1{
     margin-right: 20px;
@@ -132,6 +132,42 @@ h1{
     top: 60%;
     left: 45%;
 }
+/* ---------------email-campeign -------------------------*/
+ #email-campeign{
+    /* width: 10; */
+    position: relative;
+}
+.flex-item-2{
+    position: absolute;
+    top: 88px;
+    left: 400px;
+} 
+.flex-item-3{
+    position: absolute;
+    top: 138px;
+    left: 800px;
+} 
+.col-3{
+    flex-basis: 25%;
+    padding: 20px;
+    position: relative;
+}
+.col-3 .campeign-para{
+    padding: 30px;
+    background: #fff;
+    position: absolute;
+    top: 60%;
+} 
+.col-3 .campeign-btn{
+    text-decoration: none;
+    color: #4BA87D;
+    font-weight: bold;
+    background: #fff;
+    padding: 50px;
+    position: absolute;
+    top: 80%;
+    left: 0;
+} 
 /*--------------------- media query ----------------------*/
 @media only screen and (max-width: 688px){
     .row{
