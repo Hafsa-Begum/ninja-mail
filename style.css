@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 body{
     font-family: 'Raleway', sans-serif;
@@ -17,19 +17,32 @@ body{
 .logo{
     margin-top: 7px;
 }
-.menu{
+.menu ul{
     text-align: center;
     margin-top: 28px;
+    display: flex;
 }
-.menu a{
-    text-decoration: navy;
+.menu ul li{
+    list-style-type: none;
     margin-left: 38px;
+}
+.menu ul li a{
+    text-decoration: none;
     color: #000000;
     font-weight: 800;
     font-size: 17px;
 }
+.menu ul li::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: #4BA87D;
+    display: block;
+    margin: auto;
+
+}
 .btn{
-    border: 1px solid #4BA87D;
+    border: 3px solid #4BA87D;
     background-color: #4BA87D;
     color: #fff;
     width: 168px;
@@ -43,30 +56,89 @@ body{
     text-decoration: none;
 }
 /*----------- hero-section starts---------------- */
+.small-container{
+    width: 1088px;
+}
 .hero-section{
     background-image: url(images/hero-section/hero-bg.png);
+    margin-bottom: 80px;
 }
 .row{
     display: flex;
-    flex-basis: 50%;
+    
+    /* flex-basis: 50%; */
 }
 .col-2{
-    width: 100%;
+    width: 100%;   
 }
 .col-2.left{
     /* margin: auto 0; */
-    overflow-y: hidden;
-    padding-left: 50px;
+    /* overflow-y: hidden; */
+    /* padding-left: 50px; */
+    position: relative;
+    left: 75px;
+    top: 30px;
 }
+/* .col-2 img{
+    padding-right: 50px;
+} */
 h1{
+    font-family: 'Playfair Display', serif;
     font-weight: 900;
-    font-size: 59px;
-    line-height: 71px;
+    font-size: 50px;
+    /* line-height: 71px; */
     
+}
+.hero-btn-1{
+    margin-right: 20px;
 }
 .hero-btn-2{
     background: none;
-    color:#4BA87D;
-   
+    color:#4BA87D;  
+}
+/*---------------- video image ----------------------*/
+.middle-container{
+    background-image: url(images/section-2/section-2-bg.png);
+}
+.video-image{
+    position: relative;
+}
+.video-image img{
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;
     
+}
+.video-image .details h1{
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    color: #fff;
+}
+    
+
+.video-image .details a{
+    /* margin-left: auto;
+    margin-right: auto; */
+    text-decoration: none; 
+    background-color: #fff;
+    color: #4BA87D;
+    padding: 5px 15px;
+    font-size: 17px;
+    font-weight: 900;
+    position: absolute;
+    top: 60%;
+    left: 45%;
+}
+/*--------------------- media query ----------------------*/
+@media only screen and (max-width: 688px){
+    .row{
+        flex-direction: column;
+        flex-basis: 100%;
+    }
+    .col-2{
+        width: 100%;
+    }
 }
